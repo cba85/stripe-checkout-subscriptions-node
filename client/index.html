@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Stripe Checkout Sample</title>
+    <meta name="description" content="A demo of Stripe Payment Intents" />
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <!-- Load Stripe.js on your website. -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="./script.js" defer></script>
+
+    <style>
+      body {
+        margin: 0 auto;
+        padding: 2em;
+        max-width: 50em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="/create-checkout-session" method="POST">
+      <input type="hidden" id="soloPrice" name="priceId" />
+      <div><strong>Solo</strong></div>
+      <div>899 € / mois</div>
+      <button id="basic-plan-btn">Select</button>
+    </form>
+
+    <br />
+
+    <form action="/create-checkout-session" method="POST">
+      <input type="hidden" id="duoPrice" name="priceId" />
+      <div><strong>Duo</strong></div>
+      <div>1299 € / mois</div>
+      <button id="pro-plan-btn">Select</button>
+    </form>
+
+    <br />
+
+    <form action="/create-checkout-session" method="POST">
+      <input type="hidden" id="familyPrice" name="priceId" />
+      <div><strong>Family</strong></div>
+      <div>1499 € / mois</div>
+      <button id="pro-plan-btn">Select</button>
+    </form>
+
+    <div id="error-message" class="error-message"></div>
+  </body>
+</html>

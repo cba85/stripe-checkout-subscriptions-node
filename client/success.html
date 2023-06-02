@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Stripe Checkout Sample</title>
+    <meta name="description" content="A demo of Stripe Payment Intents" />
+
+    <script src="./success.js" defer></script>
+  </head>
+
+  <body>
+    <h1>Your payment succeeded</h1>
+    <h4>View CheckoutSession response:</h4>
+    <pre></pre>
+
+    <a href="/">Restart demo</a>
+
+    <form action="/customer-portal" method="POST">
+      <!-- In practice, use the Stripe customer ID on the server to redirect to the customer portal. This is for demo: -->
+      <input type="hidden" name="sessionId" id="sessionId" />
+
+      <button>Manage Billing</button>
+    </form>
+  </body>
+</html>
